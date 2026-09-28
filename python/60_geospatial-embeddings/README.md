@@ -19,12 +19,14 @@ These notebooks show different ways to compress or transform EO data:
 | [dimensionality-reduction/dimensionality-reduction.ipynb](./dimensionality-reduction/dimensionality-reduction.ipynb) | Sentinel-2 | `apply_dimension`, UDF (PCA) | PCA-based dimensionality reduction for ML preprocessing. See the [subfolder README](./dimensionality-reduction/README.md). |
 | [tessera/tessera-embedding.ipynb](./tessera/tessera-embedding.ipynb) | Sentinel-1 + Sentinel-2 | PyTorch UDF | Generate 128-band TESSERA pixel embeddings. See the [subfolder README](./tessera/README.md). |
 | [terramind/terramind-embedding.ipynb](./terramind/terramind-embedding.ipynb) | Sentinel-1 + Sentinel-2 | ONNX UDF | Generate 768-band TerraMind pixel embeddings for downstream land-cover and geospatial ML workflows. See the [subfolder README](./terramind/README.md). |
+| [thor/thor-embedding.ipynb](./thor/thor-embedding.ipynb) | Sentinel-1 + Sentinel-2 + Sentinel-3 | ONNX UDF, `apply_neighborhood` | Generate THOR patch embeddings unifying SAR, MSI and OLCI/SLSTR in one compute-adaptive backbone. See the [subfolder README](./thor/README.md). |
 
 ## Choosing an example
 
 - If you want a lightweight and explainable feature transform, start with [dimensionality-reduction](./dimensionality-reduction/).
 - If you want a very compact learned representation with a custom backend process, use [corsa](./corsa/).
 - If you want a task-agnostic embedding product built from EO data, use [tessera](./tessera/) or [terramind](./terramind/).
+- If you want a compute-adaptive model that unifies Sentinel-1, -2 and -3, use [thor](./thor/).
 
 ## Typical workflow
 
